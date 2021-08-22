@@ -130,7 +130,7 @@ SWITCH_STANDARD_APP(vad_app_function)
 	if ((var = switch_channel_get_variable(channel, "vad_silence_ms"))) {
 		tmp = atoi(var);
 
-		if (tmp > 0) switch_vad_set_param(s_vad->svad, "sicence_ms", tmp);
+		if (tmp > 0) switch_vad_set_param(s_vad->svad, "silence_ms", tmp);
 	}
 
 	if ((var = switch_channel_get_variable(channel, "vad_thresh"))) {
@@ -181,7 +181,7 @@ SWITCH_MODULE_SHUTDOWN_FUNCTION(mod_vad_shutdown)
 	return SWITCH_STATUS_SUCCESS;
 }
 
-// 发送事件
+// 路垄脣脥脢脗录镁
 static switch_bool_t fire_vad_event(switch_core_session_t *session, switch_vad_state_t vad_state)
 {
 	switch_event_t *event = NULL;
